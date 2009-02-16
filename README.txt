@@ -4,17 +4,14 @@ Contributors: iePlexus, kr1s
 Donate link: No Thanks
 Tags: images, gallery, slideshow, photos, page, post, featured, plugin
 Requires at least: 2.3
-Tested up to: 2.7
+Tested up to: 2.7.1
 Stable tag: 3.1.0
 
 Used to create a customizable rotating image gallery anywhere within your WordPress site.
 
 == Description ==
 
-Plugin Version: 3.1.0 Featured Content Gallery creates an automated, fully customizable javascript rotating image gallery anywhere within your WordPress site. Display images from categories, pages or posts with customizable overlay text and thumbnails. Custom options include gallery size, color, style and more.
-Uses SmoothGallery, a script developed by JonDesign found at http://smoothgallery.jondesign.net/.
-Originally developed by Jason Schuller from http://www.revolutiontwo.com/.
-Featured Content Gallery home page: <a href="http://www.FeaturedContentGallery.com/">www.FeaturedContentGallery.com</a>.
+Plugin Version: 3.1.0 Featured Content Gallery creates an automated, fully customizable javascript rotating image gallery anywhere within your WordPress site. Display images from categories, pages or posts with customizable overlay text and thumbnails. Custom options include gallery size, color, style and more. Featured Content Gallery home page: <a href="http://www.FeaturedContentGallery.com/">www.FeaturedContentGallery.com</a>.
 
 == Installation ==
 
@@ -26,7 +23,7 @@ Featured Content Gallery home page: <a href="http://www.FeaturedContentGallery.c
 
 == Frequently Asked Questions ==
 
-== Is there help or support for the Featured Content Gallery plugin? ==
+= Is there help or support for the Featured Content Gallery plugin? =
 
 Yes! Please visit <a href="http://www.FeaturedContentGallery.com/Forum">http://www.FeaturedContentGallery.com/forum</a>.
 
