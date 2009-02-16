@@ -1,6 +1,6 @@
 === Featured Content Gallery ===
 Plugin Author: iePlexus
-Contributors: iePlexus, kr1s
+Contributors: iePlexus
 Donate link: No Thanks
 Tags: images, gallery, slideshow, photos, page, post, featured, plugin
 Requires at least: 2.3
