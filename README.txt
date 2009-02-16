@@ -19,7 +19,8 @@ Plugin Version: 3.1.0 Featured Content Gallery creates an automated, fully custo
 2. Unzip the file.
 3. Upload the "featured-content-gallery" folder to the "/wp-content/plugins/" directory. (DO NOT CHANGE ANY FILE OR FOLDER NAMES)
 4. Activate the plugin through the "Plugins" menu in WordPress.
-5. Add the folowing code anywhere within your theme where you want the content gallery to be displayed: <?php include (ABSPATH . '/wp-content/plugins/featured-content-gallery/gallery.php'); ?>
+5. Add the folowing code anywhere within your theme where you want the content gallery to be displayed: '<?php include (ABSPATH . '/wp-content/plugins/featured-content-gallery/gallery.php'); ?>'
+6. Go to http://www.FeaturedContentGallery.com/install-setup/ for more details.
 
 == Frequently Asked Questions ==
 
