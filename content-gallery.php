@@ -3,7 +3,7 @@
 Plugin Name: Featured Content Gallery
 Plugin URI: http://www.featuredcontentgallery.com
 Description: Used to create a customizable rotating image gallery anywhere within your WordPress site. <a href="http://www.featuredcontentgallery.com" target="_blank">FeaturedContentGallery.com</a>: plugin page, instructions, gallery and support.
-Version: 3.0.1
+Version: 3.1.0
 Author: iePlexus
 Author URI: http://www.ieplexus.com
 */
