@@ -21,7 +21,7 @@ Plugin Version: 3.1.0 Featured Content Gallery creates an automated, fully custo
 
 = Is there help or support for the Featured Content Gallery plugin? =
 
-Yes! Please visit <a href="http://www.FeaturedContentGallery.com/Forum">http://www.FeaturedContentGallery.com/forum</a>.
+Yes! Please visit <a href="http://www.FeaturedContentGallery.com/forum">http://www.FeaturedContentGallery.com/forum</a>.
 
 == Screenshots ==
 
