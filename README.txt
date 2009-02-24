@@ -11,7 +11,7 @@ Used to create a customizable rotating image gallery anywhere within your WordPr
 
 == Description ==
 
-Featured Content Gallery creates an automated, fully customizable rotating image gallery anywhere within your WordPress site. Choose your images and display categories, pages or posts in your gallery and display them with custom overlay text and a thumbnail carousel. Custom options include gallery size, color, style and more. Featured Content Gallery home page: <a href="http://www.featuredcontentgallery.com/">FeaturedContentGallery.com</a>.      
+Featured Content Gallery creates an automated, fully customizable rotating image gallery anywhere within your WordPress site. Choose your images and display categories, pages or posts with custom overlay text and a thumbnail carousel. Custom options include gallery size, color, style and more. Featured Content Gallery home page: <a href="http://www.featuredcontentgallery.com/">FeaturedContentGallery.com</a>.      
    
 Additional Plugin Information:   
 
@@ -22,17 +22,7 @@ Additional Plugin Information:
 
 == Installation ==
 
-1. Download and unzip the plugin
-1. Upload the folder `featured-content-gallery` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php include (ABSPATH . '/wp-content/plugins/featured-content-gallery/gallery.php'); ?>` in your template
-1. Configure the plugin options in 'Settings' (minimum of two featured items)
-1. Create custom fields for each post or page featured in your gallery
-   * **articleimg** - the main image with the full image url in the value (required)
-   * **thumbnailimg** - the thumbnail image in the carousel, full url in the value (optional)
-   * **featuredtext** - the custom overlay text (optional)
-
-Go to <a href="http://www.featuredcontentgallery.com/install-setup/">FeaturedContentGallery.com/install-setup</a> for more installation details.
+Go to <a href="http://www.featuredcontentgallery.com/install-setup/">FeaturedContentGallery.com/install-setup</a> for installation details and video.
 
 == Frequently Asked Questions ==
 
