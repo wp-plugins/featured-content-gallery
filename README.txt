@@ -11,17 +11,34 @@ Used to create a customizable rotating image gallery anywhere within your WordPr
 
 == Description ==
 
-Plugin Version: 3.1.0 Featured Content Gallery creates an automated, fully customizable javascript rotating image gallery anywhere within your WordPress site. Display images from categories, pages or posts with customizable overlay text and thumbnails. Custom options include gallery size, color, style and more. Featured Content Gallery home page: <a href="http://www.FeaturedContentGallery.com/">www.FeaturedContentGallery.com</a>.
+Featured Content Gallery creates an automated, fully customizable rotating image gallery anywhere within your WordPress site. Choose your images and display categories, pages or posts in your gallery and display them with custom overlay text and a thumbnail carousel. Custom options include gallery size, color, style and more. Featured Content Gallery home page: <a href="http://www.featuredcontentgallery.com/">FeaturedContentGallery.com</a>.      
+   
+Additional Plugin Information:   
+
+* <a href="http://www.featuredcontentgallery.com/install-setup">Installation, Setup & Instructional Video</a>
+* <a href="http://www.featuredcontentgallery.com/about">About and Changelog</a>
+* <a href="http://www.featuredcontentgallery.com/showcase">FCG Website Showcase</a>
+* <a href="http://www.featuredcontentgallery.com/forum">Help and Support Forum</a>
 
 == Installation ==
 
-1. Go to http://www.FeaturedContentGallery.com/install-setup/ for more installation details.
+1. Download and unzip the plugin
+1. Upload the folder `featured-content-gallery` to the `/wp-content/plugins/` directory
+1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Place `<?php include (ABSPATH . '/wp-content/plugins/featured-content-gallery/gallery.php'); ?>` in your template
+1. Configure the plugin options in 'Settings' (minimum of two featured items)
+1. Create custom fields for each post or page featured in your gallery
+   * **articleimg** - the main image with the full image url in the value (required)
+   * **thumbnailimg** - the thumbnail image in the carousel, full url in the value (optional)
+   * **featuredtext** - the custom overlay text (optional)
+
+Go to <a href="http://www.featuredcontentgallery.com/install-setup/">FeaturedContentGallery.com/install-setup</a> for more installation details.
 
 == Frequently Asked Questions ==
 
 = Is there help or support for the Featured Content Gallery plugin? =
 
-Yes! Please visit <a href="http://www.FeaturedContentGallery.com/forum">http://www.FeaturedContentGallery.com/forum</a>.
+Yes! Please visit <a href="http://www.featuredcontentgallery.com/forum">FeaturedContentGallery.com/forum</a>.
 
 == Screenshots ==
 
@@ -31,14 +48,17 @@ Yes! Please visit <a href="http://www.FeaturedContentGallery.com/forum">http://w
 
 == Usage ==
 
-After you download and activate the new Featured Content Gallery plugin, you will first want to head over to the options page which will allow you to fully customize your gallery width, height, text overlay height and gallery colors. You will also need to select whether you'd like to have your featured content come from a blog post category or from individual post or page IDs.
-The featured content gallery plugin is now fully customizable. You have the ability to determine the main image used, the thumbnails used, the featured text content, and gallery size and colors.
-The new plugin uses four different custom fields in advanced mode. Simply upload images or enter your custom text to have the gallery display exactly what you want.
-**articleimg**: used to determine the main image for the gallery.
-**thumbnailimg**: (optional) used to determine the thumbnail image displayed. Without this enabled, the main image is automatically resized and cropped to create a thumbnail.
-**featuredtext**: (optional) enter in custom text to be displayed in the text area. Without this enabled, approximately 100 characters of text from the post or page used is displayed by default.
-**alttext**: (optional) enter in custom text to be displayed for the post or page image alt tag in the value field. Without a value, the image will not have alt text.
+After you download and activate the new Featured Content Gallery plugin, you will first want to head over to the options page which will allow you to configure your gallery. You will also need to select whether you'd like to have your featured content come from a blog post category or from individual post or page IDs.   
+   
+The featured content gallery plugin is now fully customizable. Style the gallery with options like width, height and color through the options page. For each featured item, you have the ability to determine the main image used, thumbnail, and overlay text.   
+   
+The new plugin uses four different custom fields in advanced mode. Simply upload images or enter your custom text to have the gallery display exactly what you want.  
+ 
+* **articleimg**: (required) used to determine the main image for the gallery.
+* **thumbnailimg**: (optional) used to determine the thumbnail image displayed. Without this enabled, the main image is automatically cropped to create a thumbnail.
+* **featuredtext**: (optional) enter in custom text to be displayed in the text area. Without this enabled, approximately 100 characters of text from the post or page is displayed by default.
+* **alttext**: (optional) enter in custom text to be displayed for the post or page image alt tag in the value field. Without a value, the image will not have alt text.   
 
-*Make sure to visit <a href="http://www.FeaturedContentGallery.com/">www.FeaturedContentGallery.com</a> for a live demo, detailed installation instructions, info about the plugin, a website showcase, and support forum.*
+*Make sure to visit <a href="http://www.featuredcontentgallery.com/">FeaturedContentGallery.com</a> for a live demo, detailed installation instructions, info about the plugin, a website showcase, and support forum.*
 
 Jason Thurston | Kris Themstrup | Yelena Khamidullina | <a href="http://www.ieplexus.com">iePlexus.com</a>
