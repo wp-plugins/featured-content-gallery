@@ -3,7 +3,7 @@
 Plugin Name: Featured Content Gallery
 Plugin URI: http://www.featuredcontentgallery.com
 Description: Used to create a customizable rotating image gallery anywhere within your WordPress site. <a href="http://www.featuredcontentgallery.com" target="_blank">FeaturedContentGallery.com</a>: plugin page, instructions, gallery and support.
-Version: 3.1.0
+Version: 3.1.1
 Author: iePlexus
 Author URI: http://www.ieplexus.com
 */
@@ -40,15 +40,14 @@ function gallery_styles() {
     /* The xhtml header code needed for gallery to work: */
 	$galleryscript = "
 	<!-- begin gallery scripts -->
-    <!-- <link rel=\"stylesheet\" href=\"".$gallery_path."css/jd.gallery.css\" type=\"text/css\" media=\"screen\" charset=\"utf-8\"/> -->
+    <link rel=\"stylesheet\" href=\"".$gallery_path."css/jd.gallery.css.php\" type=\"text/css\" media=\"screen\" charset=\"utf-8\"/>
+	<link rel=\"stylesheet\" href=\"".$gallery_path."css/jd.gallery.css\" type=\"text/css\" media=\"screen\" charset=\"utf-8\"/>
 	<script type=\"text/javascript\" src=\"".$gallery_path."scripts/mootools.v1.11.js\"></script>
 	<script type=\"text/javascript\" src=\"".$gallery_path."scripts/jd.gallery.js\"></script>
 	<!-- end gallery scripts -->\n";
 	
 	/* Output $galleryscript as text for our web pages: */
 	echo($galleryscript);
-	
-	include(ABSPATH . "/wp-content/plugins/featured-content-gallery/css/jd.gallery.css.php");
 }
 
 function get_a_post($id='GETPOST') {

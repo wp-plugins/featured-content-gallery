@@ -576,9 +576,9 @@ var Events = new Class({
 
 	addEvent: function(type, fn){
 		if (fn != Class.empty){
-			this.$events = this.$events || {};
-			this.$events[type] = this.$events[type] || [];
-			this.$events[type].include(fn);
+			this.$mooevents = this.$mooevents || {};
+			this.$mooevents[type] = this.$mooevents[type] || [];
+			this.$mooevents[type].include(fn);
 		}
 		return this;
 	},
@@ -605,8 +605,8 @@ var Events = new Class({
 	*/
 
 	fireEvent: function(type, args, delay){
-		if (this.$events && this.$events[type]){
-			this.$events[type].each(function(fn){
+		if (this.$mooevents && this.$mooevents[type]){
+			this.$mooevents[type].each(function(fn){
 				fn.create({'bind': this, 'delay': delay, 'arguments': args})();
 			}, this);
 		}
@@ -623,7 +623,7 @@ var Events = new Class({
 	*/
 
 	removeEvent: function(type, fn){
-		if (this.$events && this.$events[type]) this.$events[type].remove(fn);
+		if (this.$mooevents && this.$mooevents[type]) this.$mooevents[type].remove(fn);
 		return this;
 	}
 
@@ -2009,11 +2009,11 @@ Element.extend({
 
 	clone: function(contents){
 		var el = $(this.cloneNode(contents !== false));
-		if (!el.$events) return el;
-		el.$events = {};
-		for (var type in this.$events) el.$events[type] = {
-			'keys': $A(this.$events[type].keys),
-			'values': $A(this.$events[type].values)
+		if (!el.$mooevents) return el;
+		el.$mooevents = {};
+		for (var type in this.$mooevents) el.$mooevents[type] = {
+			'keys': $A(this.$mooevents[type].keys),
+			'values': $A(this.$mooevents[type].values)
 		};
 		return el.removeEvents();
 	},
@@ -2611,7 +2611,7 @@ var Garbage = {
 	trash: function(elements){
 		for (var i = 0, j = elements.length, el; i < j; i++){
 			if (!(el = elements[i]) || !el.$tmp) continue;
-			if (el.$events) el.fireEvent('trash').removeEvents();
+			if (el.$mooevents) el.fireEvent('trash').removeEvents();
 			for (var p in el.$tmp) el.$tmp[p] = null;
 			for (var d in Element.prototype) el[d] = null;
 			Garbage.elements[Garbage.elements.indexOf(el)] = null;
@@ -2817,10 +2817,10 @@ Element.Methods.Events = {
 	*/
 
 	addEvent: function(type, fn){
-		this.$events = this.$events || {};
-		this.$events[type] = this.$events[type] || {'keys': [], 'values': []};
-		if (this.$events[type].keys.contains(fn)) return this;
-		this.$events[type].keys.push(fn);
+		this.$mooevents = this.$mooevents || {};
+		this.$mooevents[type] = this.$mooevents[type] || {'keys': [], 'values': []};
+		if (this.$mooevents[type].keys.contains(fn)) return this;
+		this.$mooevents[type].keys.push(fn);
 		var realType = type;
 		var custom = Element.Events[type];
 		if (custom){
@@ -2829,7 +2829,7 @@ Element.Methods.Events = {
 			if (custom.type) realType = custom.type;
 		}
 		if (!this.addEventListener) fn = fn.create({'bind': this, 'event': true});
-		this.$events[type].values.push(fn);
+		this.$mooevents[type].values.push(fn);
 		return (Element.NativeEvents.contains(realType)) ? this.addListener(realType, fn) : this;
 	},
 
@@ -2839,11 +2839,11 @@ Element.Methods.Events = {
 	*/
 
 	removeEvent: function(type, fn){
-		if (!this.$events || !this.$events[type]) return this;
-		var pos = this.$events[type].keys.indexOf(fn);
+		if (!this.$mooevents || !this.$mooevents[type]) return this;
+		var pos = this.$mooevents[type].keys.indexOf(fn);
 		if (pos == -1) return this;
-		var key = this.$events[type].keys.splice(pos,1)[0];
-		var value = this.$events[type].values.splice(pos,1)[0];
+		var key = this.$mooevents[type].keys.splice(pos,1)[0];
+		var value = this.$mooevents[type].values.splice(pos,1)[0];
 		var custom = Element.Events[type];
 		if (custom){
 			if (custom.remove) custom.remove.call(this, fn);
@@ -2870,15 +2870,15 @@ Element.Methods.Events = {
 	*/
 
 	removeEvents: function(type){
-		if (!this.$events) return this;
+		if (!this.$mooevents) return this;
 		if (!type){
-			for (var evType in this.$events) this.removeEvents(evType);
-			this.$events = null;
-		} else if (this.$events[type]){
-			this.$events[type].keys.each(function(fn){
+			for (var evType in this.$mooevents) this.removeEvents(evType);
+			this.$mooevents = null;
+		} else if (this.$mooevents[type]){
+			this.$mooevents[type].keys.each(function(fn){
 				this.removeEvent(type, fn);
 			}, this);
-			this.$events[type] = null;
+			this.$mooevents[type] = null;
 		}
 		return this;
 	},
@@ -2894,8 +2894,8 @@ Element.Methods.Events = {
 	*/
 
 	fireEvent: function(type, args, delay){
-		if (this.$events && this.$events[type]){
-			this.$events[type].keys.each(function(fn){
+		if (this.$mooevents && this.$mooevents[type]){
+			this.$mooevents[type].keys.each(function(fn){
 				fn.create({'bind': this, 'delay': delay, 'arguments': args})();
 			}, this);
 		}
@@ -2912,11 +2912,11 @@ Element.Methods.Events = {
 	*/
 
 	cloneEvents: function(from, type){
-		if (!from.$events) return this;
+		if (!from.$mooevents) return this;
 		if (!type){
-			for (var evType in from.$events) this.cloneEvents(from, evType);
-		} else if (from.$events[type]){
-			from.$events[type].keys.each(function(fn){
+			for (var evType in from.$mooevents) this.cloneEvents(from, evType);
+		} else if (from.$mooevents[type]){
+			from.$mooevents[type].keys.each(function(fn){
 				this.addEvent(type, fn);
 			}, this);
 		}

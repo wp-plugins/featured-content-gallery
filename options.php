@@ -123,6 +123,6 @@ $location = $options_page; // Form Action URI
 
 		</fieldset>
 		<p class="submit"><input type="submit" name="Submit" value="<?php _e('Update Options') ?>" /></p>
-        <p><em>Featured Content Gallery WordPress Plugin v3.1.0 by <a href="http://www.ieplexus.com">iePlexus</a></em></p>
+        <p><em>Featured Content Gallery WordPress Plugin v3.1.1 by <a href="http://www.ieplexus.com">iePlexus</a></em></p>
 	</form>      
 </div>

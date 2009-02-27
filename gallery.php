@@ -8,7 +8,13 @@
         window.addEvent('domready',startGallery);
     </script>
 
-    
+    <style type="text/css">
+	
+	.jdGallery .slideInfoZone
+	{
+		height: <?php echo get_option('gallery-info'); ?>px;
+	}
+	</style>
     
     <div id="myGallery">
     <?php 
