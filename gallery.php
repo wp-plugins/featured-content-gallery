@@ -18,8 +18,14 @@
     
     <div id="myGallery">
     <?php 
+    $imgthumb = get_option('gallery-use-thumb-image') ? "thumbnailimg" : "articleimg";
+    $wordquantity = get_option('gallery-rss-word-quantity') ?  get_option('gallery-rss-word-quantity') : 100;
     if (get_option('gallery-way') == 'new')	{//new way
 			 $arr = split(",",get_option('gallery-items-pages'));
+			 if (get_option('gallery-randomize-pages'))
+			 {
+			 	 shuffle($arr);
+			 }
 			 foreach ($arr as $post_or_page_id)   
 			 { 
 				 get_a_post($post_or_page_id); ?>
@@ -31,10 +37,9 @@
 					  <?php 
 					  } else {
 					  ?>
-					     <p><?php the_content_rss('', 0, '', 100); ?></p>
+					     <p><?php the_content_rss('', 0, '', $wordquantity); ?></p>
 					  <?php
 						}
-						$imgthumb = get_option('gallery-use-thumb-image') ? "thumbnailimg" : "articleimg";
 						?>
 					  <a href="<?php the_permalink() ?>" title="Read More" class="open"></a>
 					  <img src="<?php $key="articleimg"; echo get_post_meta($post->ID, $key, true); ?>" alt="<?php $key="alttext"; echo get_post_meta($post->ID, $key, true); ?>" class="full" />
@@ -57,10 +62,9 @@
 					  <?php 
 					  } else {
 					  ?>
-					     <p><?php the_content_rss('', 0, '', 100); ?></p>
+					     <p><?php the_content_rss('', 0, '', $wordquantity); ?></p>
 					  <?php
 						}
-						$imgthumb = get_option('gallery-use-thumb-image') ? "thumbnailimg" : "articleimg";
 						?>
 					  <a href="<?php the_permalink() ?>" title="Read More" class="open"></a>
 					  <img src="<?php $key="articleimg"; echo get_post_meta($post->ID, $key, true); ?>" alt="<?php $key="alttext"; echo get_post_meta($post->ID, $key, true); ?>" class="full" />

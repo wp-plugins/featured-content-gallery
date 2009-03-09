@@ -5,7 +5,7 @@ Donate link: No Thanks
 Tags: images, gallery, slideshow, photos, page, post, featured, plugin
 Requires at least: 2.3
 Tested up to: 2.7.1
-Stable tag: 3.1.1
+Stable tag: 3.2.0
 
 Used to create a customizable rotating image gallery anywhere within your WordPress site.
 
@@ -40,7 +40,7 @@ Yes! Please visit <a href="http://www.featuredcontentgallery.com/forum">Featured
 
 After you download and activate the new Featured Content Gallery plugin, you will first want to head over to the options page which will allow you to configure your gallery. You will also need to select whether you'd like to have your featured content come from a blog post category or from individual post or page IDs.   
    
-The featured content gallery plugin is now fully customizable. Style the gallery with options like width, height and color through the options page. For each featured item, you have the ability to determine the main image used, thumbnail, and overlay text.   
+The featured content gallery plugin is now fully customizable. Style the gallery with options like size, color, and custom slide transitions through the options page. For each featured item, you have the ability to determine the main image used, thumbnail, and overlay text.   
    
 The new plugin uses four different custom fields in advanced mode. Simply upload images or enter your custom text to have the gallery display exactly what you want.  
  
@@ -49,6 +49,6 @@ The new plugin uses four different custom fields in advanced mode. Simply upload
 * **featuredtext**: (optional) enter in custom text to be displayed in the text area. Without this enabled, approximately 100 characters of text from the post or page is displayed by default.
 * **alttext**: (optional) enter in custom text to be displayed for the post or page image alt tag in the value field. Without a value, the image will not have alt text.   
 
-*Make sure to visit <a href="http://www.featuredcontentgallery.com/">FeaturedContentGallery.com</a> for a live demo, detailed installation instructions, info about the plugin, a website showcase, and support forum.*
+*Make sure to visit <a href="http://www.featuredcontentgallery.com/">FeaturedContentGallery.com</a> for a live demo, detailed installation instructions and video, info about the plugin, a website showcase, and support forum.*
 
 Jason Thurston | Kris Themstrup | Yelena Khamidullina | <a href="http://www.ieplexus.com">iePlexus.com</a>
